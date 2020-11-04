@@ -1,6 +1,4 @@
 import React from 'react';
-import accountReducer from '../reducers/accountReducer';
-
 
 const Accounts = (props) => {
 
