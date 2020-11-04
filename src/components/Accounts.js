@@ -1,10 +1,12 @@
 import React from 'react';
+import AccountShow from './AccountShow'
 
 const Accounts = (props) => {
 
     return (
         <div>
-            {props.accounts.map(account => <li key={account.id}>{account.name} - {account.balance}</li>)}
+            {props.accounts.map(account => 
+            <div key={account.id}><AccountShow account={account}/></div>)}
         </div>
     )
 
