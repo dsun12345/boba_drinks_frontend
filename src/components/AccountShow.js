@@ -1,4 +1,6 @@
 import React from 'react';
+import {Redirect} from 'react-router-dom'
+import BobasContainer from '../containers/BobasContainer'
 
 const AccountShow = (props) => {
 
@@ -6,9 +8,12 @@ const AccountShow = (props) => {
     
 
     return (
-        <li>
-            {account ? account.name : null} - {account ? account.balance : null}
-        </li>
+        <div>
+            <h2>
+                {account ? account.name : null} - {account ? account.balance : null}
+            </h2>
+            <BobasContainer account={account}/>
+        </div>
     )
 
 
