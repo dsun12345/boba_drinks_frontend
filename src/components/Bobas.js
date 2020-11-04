@@ -4,7 +4,9 @@ const Bobas = (props) => {
 
     return (
         <div>
-            Bobas
+            {props.bobas && props.bobas.map(boba =>
+                <li key={boba.id}>{boba.name} - ${boba.amount} - {boba.description}</li>
+                )}
         </div>
     )
 }
