@@ -6,7 +6,6 @@ import Accounts from '../components/Accounts'
 import AccountShow from '../components/AccountShow'
 import AccountInput from '../components/AccountInput'
 
-
 class AccountsContainer extends React.Component {
 
     componentDidMount() {

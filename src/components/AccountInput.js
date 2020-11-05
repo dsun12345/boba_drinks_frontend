@@ -22,7 +22,9 @@ class AccountInput extends React.Component {
 
     render () {
         return (
+           
             <div>
+                <h1>New Account</h1> 
                 <form onSubmit={this.handleSubmit}>
                     <label>Account Name: </label>
                     <input type ='text' placeholder='Name' value={this.state.name} name= 'name' onChange={this.handleChange}/><br/>

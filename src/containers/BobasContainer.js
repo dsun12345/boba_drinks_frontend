@@ -1,5 +1,4 @@
 import React from 'react'
-// import Accounts from '../components/Accounts'
 import BobaInput from '../components/BobaInput'
 import Bobas from '../components/Bobas'
 

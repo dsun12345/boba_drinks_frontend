@@ -9,11 +9,12 @@ const AccountShow = (props) => {
 
     return (
         <div>
+            <h1>Current Account and Balance</h1>
             <h2>
                 {account ? account.name : null} - {account ? account.balance : null}
             </h2>
             <BobasContainer account={account}/>
-            <h1>Menu</h1>Menu <br></br>
+            <h1>Menu</h1> <br></br>
             <BobaImages />
         </div>
     )

@@ -11,7 +11,7 @@ const handleDelete = (boba) => {
     return (
         <div>
             {props.bobas && props.bobas.map(boba =>
-                <li key={boba.id}>{boba.name} - ${boba.cost} <button onClick={() => handleDelete(boba)}>Delete</button></li>
+                <li key={boba.id}>{boba.name} - ${boba.quantity * 5} <button onClick={() => handleDelete(boba)}>Delete</button></li>
                 )}
         </div>
     )
