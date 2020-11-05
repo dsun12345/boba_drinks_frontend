@@ -18,6 +18,7 @@ class AccountInput extends React.Component {
         this.setState({
             name: '', balance: ''
         })
+        this.props.history.push('/accounts')
     }
 
     render () {
