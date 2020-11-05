@@ -1,6 +1,5 @@
 
 export default function accountReducer (state = {accounts: []}, action) {
-    debugger;
     switch (action.type) {
         case 'FETCH_ACCOUNTS':
             return {accounts: action.payload}
@@ -15,6 +14,16 @@ export default function accountReducer (state = {accounts: []}, action) {
                 }
             })
             return {...state, accounts: account}
+        case 'DELETE_BOBA':
+            let accountTwo = state.accounts.map(account => {
+                if (account.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return account
+                }
+            })
+            return {...state, accounts: accountTwo}
+        
         default:
             return state
         }

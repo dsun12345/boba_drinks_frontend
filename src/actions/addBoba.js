@@ -9,6 +9,12 @@ export const addBoba = (bobas, accountId) => {
             body: JSON.stringify(bobas)
         })
         .then(response => response.json())
-        .then(account => dispatch({type: 'ADD_BOBA', payload: account}))
+        .then(account => {
+            if (account.error) {
+                alert(account.error) 
+            } else {
+            dispatch({type: 'ADD_BOBA', payload: account})
+            }
+        })
     }
 }

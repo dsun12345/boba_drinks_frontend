@@ -3,8 +3,7 @@ import BobasContainer from '../containers/BobasContainer'
 
 const AccountShow = (props) => {
 
-    // let account = props.accounts[props.match.params.id - 1]
-    let account = props.accounts.filter(account => account.id == props.match.params.id)[0]
+    let account = props.accounts.filter(account => account.id === parseInt(props.match.params.id))[0]
 
     return (
         <div>
