@@ -6,9 +6,8 @@ import {addBoba} from '../actions/addBoba'
 class BobaInput extends React.Component {
 
     state = {
-        name: '',
-        amount: '',
-        description: ''
+        name: 'Black Sugar Milk Tea',
+        quantity: ''
     }
 
     handleChange = (event) => {
@@ -23,8 +22,7 @@ class BobaInput extends React.Component {
         this.setState(
             {
                 name: '',
-                amount: '',
-                description: ''
+                quantity: ''
             }
         )
     }
@@ -35,11 +33,14 @@ class BobaInput extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>Boba Name:</label>
-                    <input type='text' name='name' value={this.state.name} onChange={this.handleChange}/> 
-                    <label>Boba Amount:</label>
-                    <input type='text' name='amount' value={this.state.amount} onChange={this.handleChange}/> 
-                    <label>Boba Description:</label>
-                    <input type='text' name='description' value={this.state.description} onChange={this.handleChange}/> 
+                    <select name='name' value={this.state.name} onChange={this.handleChange}> 
+                        <option>Black Sugar Milk Tea</option>
+                        <option>Regular Milk Tea</option>
+                        <option>Taro Milk Tea</option>
+                        <option>Thai Iced Tea</option>
+                    </select>
+                    <label>Quantity:</label>
+                    <input type='text' name='quantity' value={this.state.quantity} onChange={this.handleChange}/> 
                     <input type='submit'/>
                 </form>
             </div>
