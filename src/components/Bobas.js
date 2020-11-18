@@ -2,17 +2,21 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {deleteBoba} from '../actions/deleteBoba'
 
-const Bobas = (props) => {
 
+const Bobas = (props) => {
+   
 const handleDelete = (boba) => {
     props.deleteBoba(boba.id, boba.account_id)
 }
 
+
     return (
         <div>
             {props.bobas && props.bobas.map(boba =>
-                <li key={boba.id}>{boba.name} - ${boba.quantity * 5} <button onClick={() => handleDelete(boba)}>Delete</button></li>
-                )}
+                <li key={boba.id}>{boba.name} - ${boba.quantity * 5} <button onClick={() => handleDelete(boba)}>Delete</button>
+                </li>       
+            )}
+            
         </div>
     )
 }

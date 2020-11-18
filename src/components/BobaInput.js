@@ -6,7 +6,7 @@ import {addBoba} from '../actions/addBoba'
 class BobaInput extends React.Component {
 
     state = {
-        name: 'Black Sugar Milk Tea',
+        name: '',
         quantity: ''
     }
 
@@ -34,6 +34,7 @@ class BobaInput extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <label>Boba Name:</label>
                     <select name='name' value={this.state.name} onChange={this.handleChange}> 
+                        <option>Please Select a drink.... </option>
                         <option>Black Sugar Milk Tea</option>
                         <option>Regular Milk Tea</option>
                         <option>Taro Milk Tea</option>

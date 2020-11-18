@@ -9,7 +9,9 @@ import AccountInput from '../components/AccountInput'
 class AccountsContainer extends React.Component {
 
     componentDidMount() {
+        console.log('a')
         this.props.fetchAccounts()
+        console.log('b')
     }
 
     render () {

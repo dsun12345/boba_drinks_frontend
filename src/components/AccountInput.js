@@ -5,6 +5,7 @@ import {addAccount} from '../actions/addAccount'
 class AccountInput extends React.Component {
 
     state = {name: '', balance: ''}
+   
 
     handleChange = (event) => {
         this.setState({
